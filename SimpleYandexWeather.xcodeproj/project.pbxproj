@@ -99,13 +99,9 @@
 		AB62544F233C9B9200BF6D65 /* SimpleYandexWeather */ = {
 			isa = PBXGroup;
 			children = (
-				AB625450233C9B9200BF6D65 /* AppDelegate.swift */,
-				AB625452233C9B9200BF6D65 /* SceneDelegate.swift */,
+				AB625480233CA0C200BF6D65 /* Application */,
+				AB625481233CA0D200BF6D65 /* Resources */,
 				AB625454233C9B9200BF6D65 /* ViewController.swift */,
-				AB625456233C9B9200BF6D65 /* Main.storyboard */,
-				AB625459233C9B9300BF6D65 /* Assets.xcassets */,
-				AB62545B233C9B9300BF6D65 /* LaunchScreen.storyboard */,
-				AB62545E233C9B9300BF6D65 /* Info.plist */,
 			);
 			path = SimpleYandexWeather;
 			sourceTree = "<group>";
@@ -126,6 +122,26 @@
 				AB625474233C9B9400BF6D65 /* Info.plist */,
 			);
 			path = SimpleYandexWeatherUITests;
+			sourceTree = "<group>";
+		};
+		AB625480233CA0C200BF6D65 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AB625450233C9B9200BF6D65 /* AppDelegate.swift */,
+				AB625452233C9B9200BF6D65 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AB625481233CA0D200BF6D65 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AB625456233C9B9200BF6D65 /* Main.storyboard */,
+				AB625459233C9B9300BF6D65 /* Assets.xcassets */,
+				AB62545B233C9B9300BF6D65 /* LaunchScreen.storyboard */,
+				AB62545E233C9B9300BF6D65 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48WSA9YGPA;
-				INFOPLIST_FILE = SimpleYandexWeather/Info.plist;
+				INFOPLIST_FILE = SimpleYandexWeather/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,7 +470,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 48WSA9YGPA;
-				INFOPLIST_FILE = SimpleYandexWeather/Info.plist;
+				INFOPLIST_FILE = SimpleYandexWeather/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
