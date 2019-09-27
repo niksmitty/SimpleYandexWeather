@@ -36,7 +36,8 @@
 		AB6254B4233CCFD800BF6D65 /* ForecastServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6254B3233CCFD800BF6D65 /* ForecastServiceImpl.swift */; };
 		AB6254B8233CF2B700BF6D65 /* DayForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6254B6233CF2B700BF6D65 /* DayForecastCell.swift */; };
 		AB6254B9233CF2B700BF6D65 /* DayForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6254B7233CF2B700BF6D65 /* DayForecastCell.xib */; };
-		AB6254BC233CFEA100BF6D65 /* DayForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6254BB233CFEA100BF6D65 /* DayForecast.swift */; };
+		AB6254BC233CFEA100BF6D65 /* DayForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6254BB233CFEA100BF6D65 /* DayForecastItem.swift */; };
+		AB6254C1233E628C00BF6D65 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6254C0233E628C00BF6D65 /* UIImageViewExtension.swift */; };
 		BB5719F57D88631FAD732932 /* Pods_SimpleYandexWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944DEE9FDD3D8CC30DFD58BC /* Pods_SimpleYandexWeatherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,7 +98,8 @@
 		AB6254B3233CCFD800BF6D65 /* ForecastServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastServiceImpl.swift; sourceTree = "<group>"; };
 		AB6254B6233CF2B700BF6D65 /* DayForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastCell.swift; sourceTree = "<group>"; };
 		AB6254B7233CF2B700BF6D65 /* DayForecastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayForecastCell.xib; sourceTree = "<group>"; };
-		AB6254BB233CFEA100BF6D65 /* DayForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecast.swift; sourceTree = "<group>"; };
+		AB6254BB233CFEA100BF6D65 /* DayForecastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastItem.swift; sourceTree = "<group>"; };
+		AB6254C0233E628C00BF6D65 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		B2E74EA3162DB36AA8F52A10 /* Pods-SimpleYandexWeatherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYandexWeatherUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleYandexWeatherUITests/Pods-SimpleYandexWeatherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F12A0E78002EF26C6166B8C5 /* Pods-SimpleYandexWeatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYandexWeatherUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleYandexWeatherUITests/Pods-SimpleYandexWeatherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FE9B7D31CF54CDB2EC41F5A7 /* Pods_SimpleYandexWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleYandexWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +176,7 @@
 				AB625494233CC00700BF6D65 /* Network */,
 				AB6254B5233CF26400BF6D65 /* Views */,
 				AB625482233CA25100BF6D65 /* Modules */,
+				AB6254BD233E61B100BF6D65 /* Extensions */,
 				AB625485233CA30700BF6D65 /* Storyboards */,
 				AB625481233CA0D200BF6D65 /* Resources */,
 			);
@@ -288,7 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				AB6254AE233CCB0600BF6D65 /* Forecast */,
-				AB6254BB233CFEA100BF6D65 /* DayForecast.swift */,
+				AB6254BB233CFEA100BF6D65 /* DayForecastItem.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -336,6 +339,14 @@
 				AB6254B7233CF2B700BF6D65 /* DayForecastCell.xib */,
 			);
 			path = DayForecast;
+			sourceTree = "<group>";
+		};
+		AB6254BD233E61B100BF6D65 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AB6254C0233E628C00BF6D65 /* UIImageViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B86942B1DAF30A9E53F72F72 /* Frameworks */ = {
@@ -583,13 +594,14 @@
 				AB62548F233CA53200BF6D65 /* WeekForecastConfigurator.swift in Sources */,
 				AB6254A7233CC8F000BF6D65 /* ForecastInfo.swift in Sources */,
 				AB62549B233CC2DA00BF6D65 /* EndPointType.swift in Sources */,
+				AB6254C1233E628C00BF6D65 /* UIImageViewExtension.swift in Sources */,
 				AB62548D233CA51F00BF6D65 /* WeekForecastInteractor.swift in Sources */,
 				AB62549D233CC48000BF6D65 /* APIConfiguration.swift in Sources */,
 				AB625489233CA4E500BF6D65 /* WeekForecastViewController.swift in Sources */,
 				AB625453233C9B9200BF6D65 /* SceneDelegate.swift in Sources */,
 				AB625496233CC03F00BF6D65 /* ServiceLayer.swift in Sources */,
 				AB6254B1233CCFAA00BF6D65 /* ForecastService.swift in Sources */,
-				AB6254BC233CFEA100BF6D65 /* DayForecast.swift in Sources */,
+				AB6254BC233CFEA100BF6D65 /* DayForecastItem.swift in Sources */,
 				AB625491233CA54200BF6D65 /* WeekForecastRouter.swift in Sources */,
 				AB6254B8233CF2B700BF6D65 /* DayForecastCell.swift in Sources */,
 			);
