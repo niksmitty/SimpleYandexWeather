@@ -6,6 +6,7 @@ target 'SimpleYandexWeather' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'SVGKit'
 
   target 'SimpleYandexWeatherTests' do
     inherit! :search_paths
