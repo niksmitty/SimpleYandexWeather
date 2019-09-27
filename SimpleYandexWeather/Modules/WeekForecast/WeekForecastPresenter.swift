@@ -22,7 +22,8 @@ class WeekForecastPresenter {
     
     private func dayForecastItems(from forecastInfo: ForecastInfo) -> [DayForecastItem] {
         let daysForecast = forecastInfo.forecasts.map {
-            DayForecastItem(day: $0.date,
+            DayForecastItem(day: $0.date.customDateString(with: Const.inputDateFormatString,
+                                                          and: Const.outputDateFormatString) ?? $0.date,
                             dayIconUrl: String(format: interactor.iconsUrlPattern,
                                                $0.parts.dayShort.icon),
                             dayTemperature: $0.parts.dayShort.temp,
@@ -94,5 +95,8 @@ extension WeekForecastPresenter {
         static let dayForecastReuseIdentifier = "DayForecastCell"
         
         static let refreshControlTitle = "Обновление прогноза погоды..."
+        
+        static let inputDateFormatString = "yyyy-MM-dd"
+        static let outputDateFormatString = "d MMMM"
     }
 }
