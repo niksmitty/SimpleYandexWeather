@@ -26,7 +26,13 @@ extension WeekForecastInteractor: WeekForecastInteractorProtocol {
     
     func getForecastInfo(with latitude: String, and longitude: String) {
         forecastService.getForecastInfo(latitude: latitude, longitude: longitude) { forecastInfo, error in
-            self.presenter.reloadItems(with: forecastInfo!)
+            guard error == nil, let forecastInfo = forecastInfo else {
+                self.presenter.hideIndicators()
+                self.presenter.handleError(String(describing: error))
+                return
+            }
+            self.presenter.handleSuccess(with: forecastInfo)
+            self.presenter.hideIndicators()
         }
     }
     

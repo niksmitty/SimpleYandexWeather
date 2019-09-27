@@ -11,6 +11,9 @@ import UIKit
 class WeekForecastViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var activity: UIActivityIndicatorView!
+    
+    private let refreshControl = UIRefreshControl()
     
     var presenter: WeekForecastPresenterProtocol!
     var configurator: WeekForecastConfiguratorProtocol = WeekForecastConfigurator()
@@ -20,6 +23,10 @@ class WeekForecastViewController: UIViewController {
         
         configurator.configure(with: self)
         presenter.configureView()
+    }
+    
+    @objc private func refresh(_ sender: Any) {
+        presenter.refreshForecast()
     }
     
     // MARK: - Navigation methods
@@ -54,12 +61,51 @@ extension WeekForecastViewController: UITableViewDataSource {
 
 extension WeekForecastViewController: WeekForecastViewProtocol {
     
+    func configureRefreshControl(_ title: String) {
+        refreshControl.tintColor = Const.refreshControlColor
+        refreshControl.attributedTitle = NSAttributedString(string: title,
+                                                            attributes: [NSAttributedString.Key.foregroundColor: Const.refreshControlColor])
+        refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
+    }
+    
+    func configureTableView() {
+        tableView.refreshControl = refreshControl
+    }
+    
     func registerCell(_ nibName: String, _ reuseIdentifier: String) {
         tableView.register(UINib(nibName: nibName, bundle: nil), forCellReuseIdentifier: reuseIdentifier)
     }
     
     func reloadData() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
+    func showProgress() {
+        DispatchQueue.main.async {
+            self.activity.startAnimating()
+        }
+    }
+    
+    func hideProgress() {
+        DispatchQueue.main.async {
+            self.activity.stopAnimating()
+        }
+    }
+    
+    func hideRefreshControl() {
+        DispatchQueue.main.async {
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
+}
+
+// MARK: - Constants
+
+extension WeekForecastViewController {
+    private enum Const {
+        static let refreshControlColor: UIColor = .black
+    }
 }

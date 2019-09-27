@@ -42,7 +42,14 @@ extension WeekForecastPresenter: WeekForecastPresenterProtocol {
     }
     
     func configureView() {
+        view.configureRefreshControl(Const.refreshControlTitle)
+        view.configureTableView()
         view.registerCell(Const.dayForecastCellNibName, Const.dayForecastReuseIdentifier)
+        view.showProgress()
+        refreshForecast()
+    }
+    
+    func refreshForecast() {
         interactor.getForecastInfo(with: "55.75396", and: "37.620393")
     }
     
@@ -61,9 +68,18 @@ extension WeekForecastPresenter: WeekForecastPresenterProtocol {
 
 extension WeekForecastPresenter: WeekForecastInteractorOutputProtocol {
     
-    func reloadItems(with forecastInfo: ForecastInfo) {
+    func hideIndicators() {
+        view.hideProgress()
+        view.hideRefreshControl()
+    }
+    
+    func handleSuccess(with forecastInfo: ForecastInfo) {
         self.items = dayForecastItems(from: forecastInfo)
         view.reloadData()
+    }
+    
+    func handleError(_ errorString: String) {
+        print("Error: \(errorString)")
     }
     
 }
@@ -74,5 +90,7 @@ extension WeekForecastPresenter {
     private enum Const {
         static let dayForecastCellNibName = "DayForecastCell"
         static let dayForecastReuseIdentifier = "DayForecastCell"
+        
+        static let refreshControlTitle = "Обновление прогноза погоды..."
     }
 }

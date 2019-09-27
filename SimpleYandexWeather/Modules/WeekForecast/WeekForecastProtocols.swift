@@ -9,19 +9,27 @@
 import Foundation
 
 protocol WeekForecastViewProtocol: class {
+    func configureRefreshControl(_ title: String)
+    func configureTableView()
     func registerCell(_ nibName: String, _ reuseIdentifier: String)
     func reloadData()
+    func showProgress()
+    func hideProgress()
+    func hideRefreshControl()
 }
 
 protocol WeekForecastPresenterProtocol: class {
     var reuseIdentifier: String { get }
     func configureView()
+    func refreshForecast()
     var itemsCount: Int { get }
     func item(atIndex indexPath: IndexPath) -> DayForecast?
 }
 
 protocol WeekForecastInteractorOutputProtocol: class {
-    func reloadItems(with forecastInfo: ForecastInfo)
+    func hideIndicators()
+    func handleSuccess(with forecastInfo: ForecastInfo)
+    func handleError(_ errorString: String)
 }
 
 protocol WeekForecastInteractorProtocol: class {
