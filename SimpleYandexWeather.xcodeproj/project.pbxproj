@@ -38,6 +38,9 @@
 		AB6254B9233CF2B700BF6D65 /* DayForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB6254B7233CF2B700BF6D65 /* DayForecastCell.xib */; };
 		AB6254BC233CFEA100BF6D65 /* DayForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6254BB233CFEA100BF6D65 /* DayForecastItem.swift */; };
 		AB6254C1233E628C00BF6D65 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6254C0233E628C00BF6D65 /* UIImageViewExtension.swift */; };
+		AB6254C3233E6BCE00BF6D65 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6254C2233E6BCE00BF6D65 /* StringExtension.swift */; };
+		AB6254C5233E6C2700BF6D65 /* DateFormatterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6254C4233E6C2700BF6D65 /* DateFormatterExtension.swift */; };
+		AB6254C7233E6C5B00BF6D65 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6254C6233E6C5B00BF6D65 /* DateExtension.swift */; };
 		BB5719F57D88631FAD732932 /* Pods_SimpleYandexWeatherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944DEE9FDD3D8CC30DFD58BC /* Pods_SimpleYandexWeatherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +103,9 @@
 		AB6254B7233CF2B700BF6D65 /* DayForecastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DayForecastCell.xib; sourceTree = "<group>"; };
 		AB6254BB233CFEA100BF6D65 /* DayForecastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastItem.swift; sourceTree = "<group>"; };
 		AB6254C0233E628C00BF6D65 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		AB6254C2233E6BCE00BF6D65 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		AB6254C4233E6C2700BF6D65 /* DateFormatterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterExtension.swift; sourceTree = "<group>"; };
+		AB6254C6233E6C5B00BF6D65 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		B2E74EA3162DB36AA8F52A10 /* Pods-SimpleYandexWeatherUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYandexWeatherUITests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleYandexWeatherUITests/Pods-SimpleYandexWeatherUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F12A0E78002EF26C6166B8C5 /* Pods-SimpleYandexWeatherUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYandexWeatherUITests.release.xcconfig"; path = "Target Support Files/Pods-SimpleYandexWeatherUITests/Pods-SimpleYandexWeatherUITests.release.xcconfig"; sourceTree = "<group>"; };
 		FE9B7D31CF54CDB2EC41F5A7 /* Pods_SimpleYandexWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleYandexWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -345,6 +351,9 @@
 			isa = PBXGroup;
 			children = (
 				AB6254C0233E628C00BF6D65 /* UIImageViewExtension.swift */,
+				AB6254C2233E6BCE00BF6D65 /* StringExtension.swift */,
+				AB6254C4233E6C2700BF6D65 /* DateFormatterExtension.swift */,
+				AB6254C6233E6C5B00BF6D65 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -586,8 +595,10 @@
 				AB6254B4233CCFD800BF6D65 /* ForecastServiceImpl.swift in Sources */,
 				AB62548B233CA51500BF6D65 /* WeekForecastPresenter.swift in Sources */,
 				AB62549F233CC4C100BF6D65 /* APIConstants.swift in Sources */,
+				AB6254C7233E6C5B00BF6D65 /* DateExtension.swift in Sources */,
 				AB6254AD233CCA7E00BF6D65 /* ForecastShortPart.swift in Sources */,
 				AB625451233C9B9200BF6D65 /* AppDelegate.swift in Sources */,
+				AB6254C5233E6C2700BF6D65 /* DateFormatterExtension.swift in Sources */,
 				AB625498233CC0B600BF6D65 /* APIClient.swift in Sources */,
 				AB6254A2233CC73D00BF6D65 /* ForecastEndPoint.swift in Sources */,
 				AB6254AB233CC9B400BF6D65 /* ForecastParts.swift in Sources */,
@@ -601,6 +612,7 @@
 				AB625453233C9B9200BF6D65 /* SceneDelegate.swift in Sources */,
 				AB625496233CC03F00BF6D65 /* ServiceLayer.swift in Sources */,
 				AB6254B1233CCFAA00BF6D65 /* ForecastService.swift in Sources */,
+				AB6254C3233E6BCE00BF6D65 /* StringExtension.swift in Sources */,
 				AB6254BC233CFEA100BF6D65 /* DayForecastItem.swift in Sources */,
 				AB625491233CA54200BF6D65 /* WeekForecastRouter.swift in Sources */,
 				AB6254B8233CF2B700BF6D65 /* DayForecastCell.swift in Sources */,
