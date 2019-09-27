@@ -21,8 +21,8 @@ class DayForecastCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        dayTemperatureTitleLabel.text = "Температура днём"
-        nightTemperatureTitleLabel.text = "Температура ночью"
+        dayTemperatureTitleLabel.text = Const.dayTemperatureTitle
+        nightTemperatureTitleLabel.text = Const.nightTemperatureTitle
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -35,6 +35,17 @@ class DayForecastCell: UITableViewCell {
         dayLabel.text = dayForecastItem.day
         dayTemperatureValueLabel.text = "\(dayForecastItem.dayTemperature)ºC"
         nightTemperatureValueLabel.text = "\(dayForecastItem.nightTemperature)ºC"
+        dayIconImageView.setImageFromUrl(urlString: dayForecastItem.dayIconUrl)
+        nightIconImageView.setImageFromUrl(urlString: dayForecastItem.nightIconUrl)
     }
     
+}
+
+// MARK: - Constants
+
+extension DayForecastCell {
+    private enum Const {
+        static let dayTemperatureTitle = "Днём"
+        static let nightTemperatureTitle = "Ночью"
+    }
 }
