@@ -31,7 +31,7 @@ class DayForecastCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(with dayForecastItem: DayForecast) {
+    func configureCell(with dayForecastItem: DayForecastItem) {
         dayLabel.text = dayForecastItem.day
         dayTemperatureValueLabel.text = "\(dayForecastItem.dayTemperature)ºC"
         nightTemperatureValueLabel.text = "\(dayForecastItem.nightTemperature)ºC"

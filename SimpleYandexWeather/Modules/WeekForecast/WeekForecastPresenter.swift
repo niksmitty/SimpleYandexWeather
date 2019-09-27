@@ -14,13 +14,13 @@ class WeekForecastPresenter {
     var interactor: WeekForecastInteractorProtocol!
     var router: WeekForecastRouterProtocol!
     
-    var items = [DayForecast]()
+    var items = [DayForecastItem]()
     
     required init(view: WeekForecastViewProtocol) {
         self.view = view
     }
     
-    private func dayForecastItems(from forecastInfo: ForecastInfo) -> [DayForecast] {
+    private func dayForecastItems(from forecastInfo: ForecastInfo) -> [DayForecastItem] {
         let daysForecast = forecastInfo.forecasts.map {
             DayForecast(day: $0.date,
                         dayIcon: $0.parts.dayShort.icon,
@@ -57,7 +57,7 @@ extension WeekForecastPresenter: WeekForecastPresenterProtocol {
         return items.count
     }
     
-    func item(atIndex indexPath: IndexPath) -> DayForecast? {
+    func item(atIndex indexPath: IndexPath) -> DayForecastItem? {
         guard items.indices.contains(indexPath.row) else { return nil }
         return items[indexPath.row]
     }

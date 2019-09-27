@@ -23,7 +23,7 @@ protocol WeekForecastPresenterProtocol: class {
     func configureView()
     func refreshForecast()
     var itemsCount: Int { get }
-    func item(atIndex indexPath: IndexPath) -> DayForecast?
+    func item(atIndex indexPath: IndexPath) -> DayForecastItem?
 }
 
 protocol WeekForecastInteractorOutputProtocol: class {
