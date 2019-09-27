@@ -22,11 +22,13 @@ class WeekForecastPresenter {
     
     private func dayForecastItems(from forecastInfo: ForecastInfo) -> [DayForecastItem] {
         let daysForecast = forecastInfo.forecasts.map {
-            DayForecast(day: $0.date,
-                        dayIcon: $0.parts.dayShort.icon,
-                        dayTemperature: $0.parts.dayShort.temp,
-                        nightIcon: $0.parts.nightShort.icon,
-                        nightTemperature: $0.parts.nightShort.temp)
+            DayForecastItem(day: $0.date,
+                            dayIconUrl: String(format: interactor.iconsUrlPattern,
+                                               $0.parts.dayShort.icon),
+                            dayTemperature: $0.parts.dayShort.temp,
+                            nightIconUrl: String(format: interactor.iconsUrlPattern,
+                                                 $0.parts.nightShort.icon),
+                            nightTemperature: $0.parts.nightShort.temp)
         }
         return daysForecast
     }

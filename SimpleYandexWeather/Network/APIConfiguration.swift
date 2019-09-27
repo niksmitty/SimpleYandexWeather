@@ -16,4 +16,8 @@ final class APIConfiguration {
         return APIConstants.Server.dev.headerFields
     }
     
+    var iconsUrlPattern: String {
+        return APIConstants.Server.dev.iconsUrlPattern
+    }
+    
 }

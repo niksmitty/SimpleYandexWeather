@@ -36,4 +36,8 @@ extension WeekForecastInteractor: WeekForecastInteractorProtocol {
         }
     }
     
+    var iconsUrlPattern: String {
+        return ServiceLayer.shared.configuration.iconsUrlPattern
+    }
+    
 }

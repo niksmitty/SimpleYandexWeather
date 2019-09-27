@@ -32,6 +32,13 @@ enum APIConstants {
             }
         }
         
+        var iconsUrlPattern: String {
+            switch self {
+            case .dev:
+                return "https://yastatic.net/weather/i/icons/blueye/color/svg/%@.svg"
+            }
+        }
+        
     }
     
 }
