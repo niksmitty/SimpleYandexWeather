@@ -9,6 +9,7 @@
 import Foundation
 
 protocol WeekForecastViewProtocol: class {
+    func configureNavigationBar(_ title: String)
     func configureRefreshControl(_ title: String)
     func configureTableView()
     func registerCell(_ nibName: String, _ reuseIdentifier: String)

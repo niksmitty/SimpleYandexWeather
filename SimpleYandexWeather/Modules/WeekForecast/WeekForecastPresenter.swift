@@ -53,6 +53,7 @@ extension WeekForecastPresenter: WeekForecastPresenterProtocol {
     }
     
     func configureView() {
+        view.configureNavigationBar(Const.navBarTitle)
         view.configureRefreshControl(Const.refreshControlTitle)
         view.configureTableView()
         view.registerCell(Const.dayForecastCellNibName, Const.dayForecastReuseIdentifier)
@@ -109,5 +110,7 @@ extension WeekForecastPresenter {
         
         static let sectionHeaderHeight = 0.01
         static let sectionFooterHeight = 0.01
+        
+        static let navBarTitle = "Прогноз погоды на неделю"
     }
 }

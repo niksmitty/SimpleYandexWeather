@@ -83,6 +83,10 @@ extension WeekForecastViewController: UITableViewDelegate {
 
 extension WeekForecastViewController: WeekForecastViewProtocol {
     
+    func configureNavigationBar(_ title: String) {
+        navigationItem.title = title
+    }
+    
     func configureRefreshControl(_ title: String) {
         refreshControl.tintColor = Const.refreshControlColor
         refreshControl.attributedTitle = NSAttributedString(string: title,
