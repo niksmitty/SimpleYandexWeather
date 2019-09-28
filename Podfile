@@ -6,6 +6,7 @@ target 'SimpleYandexWeather' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'RealmSwift'
   pod 'SVGKit'
 
   target 'SimpleYandexWeatherTests' do
