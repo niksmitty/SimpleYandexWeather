@@ -57,6 +57,28 @@ extension WeekForecastViewController: UITableViewDataSource {
     
 }
 
+// MARK: - UITableViewDelegate methods
+
+extension WeekForecastViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(presenter.sectionHeaderHeight)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return Const.emptyView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat(presenter.sectionFooterHeight)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return Const.emptyView
+    }
+    
+}
+
 // MARK: - WeekForecastViewProtocol methods
 
 extension WeekForecastViewController: WeekForecastViewProtocol {
@@ -107,5 +129,6 @@ extension WeekForecastViewController: WeekForecastViewProtocol {
 extension WeekForecastViewController {
     private enum Const {
         static let refreshControlColor: UIColor = .black
+        static let emptyView = UIView(frame: .zero)
     }
 }

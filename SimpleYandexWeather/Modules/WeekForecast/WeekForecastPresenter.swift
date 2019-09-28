@@ -44,6 +44,14 @@ extension WeekForecastPresenter: WeekForecastPresenterProtocol {
         return Const.dayForecastReuseIdentifier
     }
     
+    var sectionHeaderHeight: Double {
+        return Const.sectionHeaderHeight
+    }
+    
+    var sectionFooterHeight: Double {
+        return Const.sectionFooterHeight
+    }
+    
     func configureView() {
         view.configureRefreshControl(Const.refreshControlTitle)
         view.configureTableView()
@@ -98,5 +106,8 @@ extension WeekForecastPresenter {
         
         static let inputDateFormatString = "yyyy-MM-dd"
         static let outputDateFormatString = "d MMMM"
+        
+        static let sectionHeaderHeight = 0.01
+        static let sectionFooterHeight = 0.01
     }
 }

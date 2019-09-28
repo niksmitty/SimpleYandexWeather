@@ -20,6 +20,8 @@ protocol WeekForecastViewProtocol: class {
 
 protocol WeekForecastPresenterProtocol: class {
     var reuseIdentifier: String { get }
+    var sectionHeaderHeight: Double { get }
+    var sectionFooterHeight: Double { get }
     func configureView()
     func refreshForecast()
     var itemsCount: Int { get }
