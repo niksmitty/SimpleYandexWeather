@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		374AF096AFAC6556A242451A /* Pods_SimpleYandexWeatherUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E23F15D53A08E20595FF7F1 /* Pods_SimpleYandexWeatherUITests.framework */; };
 		62EDB60A331AFD5DEA8119D2 /* Pods_SimpleYandexWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE9B7D31CF54CDB2EC41F5A7 /* Pods_SimpleYandexWeather.framework */; };
+		AB0E96A9233F592A009214C7 /* DayForecastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96A8233F592A009214C7 /* DayForecastViewController.swift */; };
+		AB0E96AB233F6F1A009214C7 /* DayForecastPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96AA233F6F1A009214C7 /* DayForecastPresenter.swift */; };
+		AB0E96AD233F6F2C009214C7 /* DayForecastInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96AC233F6F2C009214C7 /* DayForecastInteractor.swift */; };
+		AB0E96AF233F6F37009214C7 /* DayForecastRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96AE233F6F37009214C7 /* DayForecastRouter.swift */; };
+		AB0E96B1233F6F4B009214C7 /* DayForecastConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96B0233F6F4B009214C7 /* DayForecastConfigurator.swift */; };
+		AB0E96B3233F6F58009214C7 /* DayForecastProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96B2233F6F58009214C7 /* DayForecastProtocols.swift */; };
+		AB0E96B5233F7948009214C7 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96B4233F7948009214C7 /* UIViewControllerExtension.swift */; };
+		AB0E96B7233F7986009214C7 /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96B6233F7986009214C7 /* NSObjectExtension.swift */; };
+		AB0E96B9233F79C9009214C7 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96B8233F79C9009214C7 /* Storyboards.swift */; };
 		AB625451233C9B9200BF6D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625450233C9B9200BF6D65 /* AppDelegate.swift */; };
 		AB625453233C9B9200BF6D65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625452233C9B9200BF6D65 /* SceneDelegate.swift */; };
 		AB62545A233C9B9300BF6D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB625459233C9B9300BF6D65 /* Assets.xcassets */; };
@@ -68,6 +77,15 @@
 		7E23F15D53A08E20595FF7F1 /* Pods_SimpleYandexWeatherUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleYandexWeatherUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88144F56626FF2206F735F71 /* Pods-SimpleYandexWeatherTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleYandexWeatherTests.debug.xcconfig"; path = "Target Support Files/Pods-SimpleYandexWeatherTests/Pods-SimpleYandexWeatherTests.debug.xcconfig"; sourceTree = "<group>"; };
 		944DEE9FDD3D8CC30DFD58BC /* Pods_SimpleYandexWeatherTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleYandexWeatherTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB0E96A8233F592A009214C7 /* DayForecastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastViewController.swift; sourceTree = "<group>"; };
+		AB0E96AA233F6F1A009214C7 /* DayForecastPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastPresenter.swift; sourceTree = "<group>"; };
+		AB0E96AC233F6F2C009214C7 /* DayForecastInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastInteractor.swift; sourceTree = "<group>"; };
+		AB0E96AE233F6F37009214C7 /* DayForecastRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastRouter.swift; sourceTree = "<group>"; };
+		AB0E96B0233F6F4B009214C7 /* DayForecastConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastConfigurator.swift; sourceTree = "<group>"; };
+		AB0E96B2233F6F58009214C7 /* DayForecastProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayForecastProtocols.swift; sourceTree = "<group>"; };
+		AB0E96B4233F7948009214C7 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		AB0E96B6233F7986009214C7 /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		AB0E96B8233F79C9009214C7 /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
 		AB62544D233C9B9200BF6D65 /* SimpleYandexWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYandexWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB625450233C9B9200BF6D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB625452233C9B9200BF6D65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -251,6 +269,12 @@
 		AB625484233CA2CD00BF6D65 /* DayForecast */ = {
 			isa = PBXGroup;
 			children = (
+				AB0E96A8233F592A009214C7 /* DayForecastViewController.swift */,
+				AB0E96AA233F6F1A009214C7 /* DayForecastPresenter.swift */,
+				AB0E96AC233F6F2C009214C7 /* DayForecastInteractor.swift */,
+				AB0E96AE233F6F37009214C7 /* DayForecastRouter.swift */,
+				AB0E96B0233F6F4B009214C7 /* DayForecastConfigurator.swift */,
+				AB0E96B2233F6F58009214C7 /* DayForecastProtocols.swift */,
 			);
 			path = DayForecast;
 			sourceTree = "<group>";
@@ -259,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				AB625486233CA38700BF6D65 /* Forecast.storyboard */,
+				AB0E96B8233F79C9009214C7 /* Storyboards.swift */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -354,6 +379,8 @@
 				AB6254C2233E6BCE00BF6D65 /* StringExtension.swift */,
 				AB6254C4233E6C2700BF6D65 /* DateFormatterExtension.swift */,
 				AB6254C6233E6C5B00BF6D65 /* DateExtension.swift */,
+				AB0E96B4233F7948009214C7 /* UIViewControllerExtension.swift */,
+				AB0E96B6233F7986009214C7 /* NSObjectExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -590,9 +617,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB0E96B1233F6F4B009214C7 /* DayForecastConfigurator.swift in Sources */,
+				AB0E96B7233F7986009214C7 /* NSObjectExtension.swift in Sources */,
 				AB6254A9233CC91500BF6D65 /* Forecast.swift in Sources */,
 				AB625493233CA55900BF6D65 /* WeekForecastProtocols.swift in Sources */,
 				AB6254B4233CCFD800BF6D65 /* ForecastServiceImpl.swift in Sources */,
+				AB0E96AD233F6F2C009214C7 /* DayForecastInteractor.swift in Sources */,
+				AB0E96B9233F79C9009214C7 /* Storyboards.swift in Sources */,
 				AB62548B233CA51500BF6D65 /* WeekForecastPresenter.swift in Sources */,
 				AB62549F233CC4C100BF6D65 /* APIConstants.swift in Sources */,
 				AB6254C7233E6C5B00BF6D65 /* DateExtension.swift in Sources */,
@@ -600,15 +631,20 @@
 				AB625451233C9B9200BF6D65 /* AppDelegate.swift in Sources */,
 				AB6254C5233E6C2700BF6D65 /* DateFormatterExtension.swift in Sources */,
 				AB625498233CC0B600BF6D65 /* APIClient.swift in Sources */,
+				AB0E96AB233F6F1A009214C7 /* DayForecastPresenter.swift in Sources */,
 				AB6254A2233CC73D00BF6D65 /* ForecastEndPoint.swift in Sources */,
+				AB0E96A9233F592A009214C7 /* DayForecastViewController.swift in Sources */,
+				AB0E96B3233F6F58009214C7 /* DayForecastProtocols.swift in Sources */,
 				AB6254AB233CC9B400BF6D65 /* ForecastParts.swift in Sources */,
 				AB62548F233CA53200BF6D65 /* WeekForecastConfigurator.swift in Sources */,
 				AB6254A7233CC8F000BF6D65 /* ForecastInfo.swift in Sources */,
 				AB62549B233CC2DA00BF6D65 /* EndPointType.swift in Sources */,
+				AB0E96B5233F7948009214C7 /* UIViewControllerExtension.swift in Sources */,
 				AB6254C1233E628C00BF6D65 /* UIImageViewExtension.swift in Sources */,
 				AB62548D233CA51F00BF6D65 /* WeekForecastInteractor.swift in Sources */,
 				AB62549D233CC48000BF6D65 /* APIConfiguration.swift in Sources */,
 				AB625489233CA4E500BF6D65 /* WeekForecastViewController.swift in Sources */,
+				AB0E96AF233F6F37009214C7 /* DayForecastRouter.swift in Sources */,
 				AB625453233C9B9200BF6D65 /* SceneDelegate.swift in Sources */,
 				AB625496233CC03F00BF6D65 /* ServiceLayer.swift in Sources */,
 				AB6254B1233CCFAA00BF6D65 /* ForecastService.swift in Sources */,

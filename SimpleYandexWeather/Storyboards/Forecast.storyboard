@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ipq-VC-uSh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="245-6x-yC7">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AZ6-a2-7wv">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ipq-VC-uSh" id="Krl-n5-2cY"/>
@@ -38,12 +38,59 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wUe-ZC-ErT"/>
                     </view>
+                    <navigationItem key="navigationItem" id="p6M-U8-Fkh"/>
                     <connections>
                         <outlet property="activity" destination="SZD-td-A9t" id="Pof-qa-WBC"/>
                         <outlet property="tableView" destination="AZ6-a2-7wv" id="Qky-sL-Eaq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p0n-If-OwQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1050.7246376811595" y="154.6875"/>
+        </scene>
+        <!--Day Forecast View Controller-->
+        <scene sceneID="C3Q-jl-KMZ">
+            <objects>
+                <viewController storyboardIdentifier="DayForecastViewController" id="GKX-2H-QaV" customClass="DayForecastViewController" customModule="SimpleYandexWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c86-o0-asa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day forecast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-fR-HjF">
+                                <rect key="frame" x="159" y="437.5" width="96.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="lR8-fR-HjF" firstAttribute="centerY" secondItem="c86-o0-asa" secondAttribute="centerY" id="YAO-p9-N3O"/>
+                            <constraint firstItem="lR8-fR-HjF" firstAttribute="centerX" secondItem="c86-o0-asa" secondAttribute="centerX" id="y4w-y0-iDi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x3B-Iu-7ES"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eEq-Xd-eu1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckr-34-HXw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1991" y="155"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lhu-PH-X35">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="245-6x-yC7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uUS-CF-2xG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ipq-VC-uSh" kind="relationship" relationship="rootViewController" id="nfq-ah-3pf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8tc-dO-95z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="140.57971014492756" y="154.6875"/>
         </scene>
