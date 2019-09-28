@@ -74,6 +74,10 @@ extension WeekForecastPresenter: WeekForecastPresenterProtocol {
         return items[indexPath.row]
     }
     
+    func cellSelected(at indexPath: IndexPath) {
+        router.showDayForecast(with: items[indexPath.row])
+    }
+    
 }
 
 // MARK: - WeekForecastPresenterProtocol methods

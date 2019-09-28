@@ -27,6 +27,7 @@ protocol WeekForecastPresenterProtocol: class {
     func refreshForecast()
     var itemsCount: Int { get }
     func item(atIndex indexPath: IndexPath) -> DayForecastItem?
+    func cellSelected(at indexPath: IndexPath)
 }
 
 protocol WeekForecastInteractorOutputProtocol: class {
@@ -41,7 +42,7 @@ protocol WeekForecastInteractorProtocol: class {
 }
 
 protocol WeekForecastRouterProtocol: class {
-    
+    func showDayForecast(with dayForecastItem: DayForecastItem)
 }
 
 protocol WeekForecastConfiguratorProtocol: class {

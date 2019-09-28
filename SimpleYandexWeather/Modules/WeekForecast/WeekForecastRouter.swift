@@ -18,4 +18,10 @@ class WeekForecastRouter {
 
 extension WeekForecastRouter: WeekForecastRouterProtocol {
     
+    func showDayForecast(with dayForecastItem: DayForecastItem) {
+        let vc = DayForecastViewController.controllerFromStoryboard(.forecast)
+        vc.configurator.configure(with: vc, and: dayForecastItem)
+        viewController.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

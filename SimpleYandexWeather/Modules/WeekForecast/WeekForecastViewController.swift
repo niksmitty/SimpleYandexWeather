@@ -29,12 +29,6 @@ class WeekForecastViewController: UIViewController {
         presenter.refreshForecast()
     }
     
-    // MARK: - Navigation methods
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-    }
-    
 }
 
 // MARK: - UITableViewDataSource methods
@@ -53,6 +47,11 @@ extension WeekForecastViewController: UITableViewDataSource {
         cell.configureCell(with: item)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.cellSelected(at: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
