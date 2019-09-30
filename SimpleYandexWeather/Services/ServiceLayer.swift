@@ -12,6 +12,7 @@ final class ServiceLayer {
     
     private(set) lazy var forecastService: ForecastService = ForecastServiceImpl(client: apiClient)
     private(set) lazy var forecastStorageService: ForecastStorageService = ForecastStorageServiceImpl(database: database)
+    private(set) lazy var locationService: LocationService = LocationService()
     
     public let configuration = APIConfiguration()
     
