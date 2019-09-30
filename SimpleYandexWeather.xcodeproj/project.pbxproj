@@ -27,6 +27,7 @@
 		AB0E96D2234219FE009214C7 /* HourForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96D1234219FD009214C7 /* HourForecastItem.swift */; };
 		AB0E96D623422923009214C7 /* HourForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96D423422923009214C7 /* HourForecastCell.swift */; };
 		AB0E96D723422923009214C7 /* HourForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0E96D523422923009214C7 /* HourForecastCell.xib */; };
+		AB0E96DB23424F87009214C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB0E96DD23424F87009214C7 /* Localizable.strings */; };
 		AB625451233C9B9200BF6D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625450233C9B9200BF6D65 /* AppDelegate.swift */; };
 		AB625453233C9B9200BF6D65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625452233C9B9200BF6D65 /* SceneDelegate.swift */; };
 		AB62545A233C9B9300BF6D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB625459233C9B9300BF6D65 /* Assets.xcassets */; };
@@ -104,6 +105,8 @@
 		AB0E96D1234219FD009214C7 /* HourForecastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourForecastItem.swift; sourceTree = "<group>"; };
 		AB0E96D423422923009214C7 /* HourForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourForecastCell.swift; sourceTree = "<group>"; };
 		AB0E96D523422923009214C7 /* HourForecastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourForecastCell.xib; sourceTree = "<group>"; };
+		AB0E96DC23424F87009214C7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AB0E96DE23424FCE009214C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB62544D233C9B9200BF6D65 /* SimpleYandexWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYandexWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB625450233C9B9200BF6D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB625452233C9B9200BF6D65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -345,6 +348,7 @@
 				AB625459233C9B9300BF6D65 /* Assets.xcassets */,
 				AB62545B233C9B9300BF6D65 /* LaunchScreen.storyboard */,
 				AB62545E233C9B9300BF6D65 /* Info.plist */,
+				AB0E96DD23424F87009214C7 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -592,6 +596,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = AB625444233C9B9200BF6D65;
 			productRefGroup = AB62544E233C9B9200BF6D65 /* Products */;
@@ -611,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB62545D233C9B9300BF6D65 /* LaunchScreen.storyboard in Resources */,
+				AB0E96DB23424F87009214C7 /* Localizable.strings in Resources */,
 				AB6254B9233CF2B700BF6D65 /* DayForecastCell.xib in Resources */,
 				AB625487233CA38700BF6D65 /* Forecast.storyboard in Resources */,
 				AB62545A233C9B9300BF6D65 /* Assets.xcassets in Resources */,
@@ -803,6 +809,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AB0E96DD23424F87009214C7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AB0E96DC23424F87009214C7 /* ru */,
+				AB0E96DE23424FCE009214C7 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		AB62545B233C9B9300BF6D65 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -818,6 +833,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -878,6 +894,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

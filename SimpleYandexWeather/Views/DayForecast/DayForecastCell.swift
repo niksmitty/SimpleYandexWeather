@@ -45,7 +45,7 @@ class DayForecastCell: UITableViewCell {
 
 extension DayForecastCell {
     private enum Const {
-        static let dayTemperatureTitle = "Днём"
-        static let nightTemperatureTitle = "Ночью"
+        static let dayTemperatureTitle = NSLocalizedString("Day temperature title", comment: "")
+        static let nightTemperatureTitle = NSLocalizedString("Night temperature title", comment: "")
     }
 }

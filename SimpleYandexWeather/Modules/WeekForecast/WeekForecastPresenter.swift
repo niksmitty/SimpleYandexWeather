@@ -105,7 +105,7 @@ extension WeekForecastPresenter {
         static let dayForecastCellNibName = "DayForecastCell"
         static let dayForecastReuseIdentifier = "DayForecastCell"
         
-        static let refreshControlTitle = "Обновление прогноза погоды..."
+        static let refreshControlTitle = NSLocalizedString("Week forecast refresh control title", comment: "")
         
         static let inputDateFormatString = "yyyy-MM-dd"
         static let outputDateFormatString = "d MMMM"
@@ -113,6 +113,6 @@ extension WeekForecastPresenter {
         static let sectionHeaderHeight = 0.01
         static let sectionFooterHeight = 0.01
         
-        static let navBarTitle = "Прогноз погоды на неделю"
+        static let navBarTitle = NSLocalizedString("Week forecast title", comment: "")
     }
 }

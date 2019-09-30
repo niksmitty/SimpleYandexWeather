@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SimpleYandexWeather
+
+  Created by Никита on 30/09/2019.
+  Copyright © 2019 Никита. All rights reserved.
+*/
+
+"Day temperature title" = "In the afternoon";
+"Night temperature title" = "At night";
+"Week forecast title" = "Week weather forecast";
+"Week forecast refresh control title" = "Weather forecast updating...";

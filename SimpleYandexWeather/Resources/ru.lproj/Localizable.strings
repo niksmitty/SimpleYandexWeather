@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SimpleYandexWeather
+
+  Created by Никита on 30/09/2019.
+  Copyright © 2019 Никита. All rights reserved.
+*/
+
+"Day temperature title" = "Днём";
+"Night temperature title" = "Ночью";
+"Week forecast title" = "Прогноз погоды на неделю";
+"Week forecast refresh control title" = "Обновление прогноза погоды...";
