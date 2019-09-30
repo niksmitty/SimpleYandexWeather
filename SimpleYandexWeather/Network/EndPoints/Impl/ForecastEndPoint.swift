@@ -43,7 +43,7 @@ enum ForecastEndPoint: EndPointType {
     var parameters: Parameters? {
         switch self {
         case .forecast(let latitude, let longitude):
-            return ["lat": latitude, "password": longitude]
+            return ["lat": latitude, "lon": longitude]
         }
     }
 
