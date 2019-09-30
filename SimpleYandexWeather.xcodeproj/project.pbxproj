@@ -212,6 +212,16 @@
 			path = DB;
 			sourceTree = "<group>";
 		};
+		AB0E96C823420D56009214C7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AB625494233CC00700BF6D65 /* Network */,
+				AB0E96BA23400805009214C7 /* LocalPersistence */,
+				AB625495233CC03F00BF6D65 /* ServiceLayer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		AB625444233C9B9200BF6D65 = {
 			isa = PBXGroup;
 			children = (
@@ -239,8 +249,7 @@
 			children = (
 				AB625480233CA0C200BF6D65 /* Application */,
 				AB6254A3233CC7E700BF6D65 /* Entities */,
-				AB625494233CC00700BF6D65 /* Network */,
-				AB0E96BA23400805009214C7 /* LocalPersistence */,
+				AB0E96C823420D56009214C7 /* Services */,
 				AB6254B5233CF26400BF6D65 /* Views */,
 				AB625482233CA25100BF6D65 /* Modules */,
 				AB6254BD233E61B100BF6D65 /* Extensions */,
@@ -336,7 +345,6 @@
 			children = (
 				AB625499233CC2C200BF6D65 /* EndPoints */,
 				AB6254AF233CCF7C00BF6D65 /* Services */,
-				AB625495233CC03F00BF6D65 /* ServiceLayer.swift */,
 				AB625497233CC0B600BF6D65 /* APIClient.swift */,
 				AB62549C233CC48000BF6D65 /* APIConfiguration.swift */,
 				AB62549E233CC4C100BF6D65 /* APIConstants.swift */,
