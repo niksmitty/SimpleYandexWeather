@@ -20,3 +20,35 @@ class DBDayForecastItem: Object {
         return "day"
     }
 }
+
+extension DBDayForecastItem: DomainConvertibleType {
+    
+    func asDomain() -> DayForecastItem {
+        return DayForecastItem(day: day,
+                               dayIconUrl: dayIconUrl,
+                               dayTemperature: dayTemperature,
+                               nightIconUrl: nightIconUrl,
+                               nightTemperature: nightTemperature,
+                               hours: hours.map { $0.asDomain() })
+    }
+    
+}
+
+extension DayForecastItem: RealmRepresentable {
+    
+    func asRealm() -> DBDayForecastItem {
+        return DBDayForecastItem.build { object in
+            object.day = day
+            object.dayIconUrl = dayIconUrl
+            object.dayTemperature = dayTemperature
+            object.nightIconUrl = nightIconUrl
+            object.nightTemperature = nightTemperature
+            
+            let hours = List<DBHourForecastItem>()
+            hours.append(objectsIn: self.hours.map { $0.asRealm() })
+            
+            object.hours.append(objectsIn: hours)
+        }
+    }
+    
+}

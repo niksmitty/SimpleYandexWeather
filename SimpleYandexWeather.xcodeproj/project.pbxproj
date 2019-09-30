@@ -28,6 +28,9 @@
 		AB0E96D623422923009214C7 /* HourForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96D423422923009214C7 /* HourForecastCell.swift */; };
 		AB0E96D723422923009214C7 /* HourForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0E96D523422923009214C7 /* HourForecastCell.xib */; };
 		AB0E96DB23424F87009214C7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB0E96DD23424F87009214C7 /* Localizable.strings */; };
+		AB0E96E12342685A009214C7 /* DomainConvertibleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96E02342685A009214C7 /* DomainConvertibleType.swift */; };
+		AB0E96E323426AAA009214C7 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96E223426AAA009214C7 /* RealmRepresentable.swift */; };
+		AB0E96E523426B92009214C7 /* ObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96E423426B92009214C7 /* ObjectExtension.swift */; };
 		AB625451233C9B9200BF6D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625450233C9B9200BF6D65 /* AppDelegate.swift */; };
 		AB625453233C9B9200BF6D65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625452233C9B9200BF6D65 /* SceneDelegate.swift */; };
 		AB62545A233C9B9300BF6D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB625459233C9B9300BF6D65 /* Assets.xcassets */; };
@@ -107,6 +110,9 @@
 		AB0E96D523422923009214C7 /* HourForecastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourForecastCell.xib; sourceTree = "<group>"; };
 		AB0E96DC23424F87009214C7 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AB0E96DE23424FCE009214C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AB0E96E02342685A009214C7 /* DomainConvertibleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainConvertibleType.swift; sourceTree = "<group>"; };
+		AB0E96E223426AAA009214C7 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
+		AB0E96E423426B92009214C7 /* ObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectExtension.swift; sourceTree = "<group>"; };
 		AB62544D233C9B9200BF6D65 /* SimpleYandexWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYandexWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB625450233C9B9200BF6D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB625452233C9B9200BF6D65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -278,6 +284,15 @@
 			path = HourForecast;
 			sourceTree = "<group>";
 		};
+		AB0E96DF2342683B009214C7 /* Convertion */ = {
+			isa = PBXGroup;
+			children = (
+				AB0E96E02342685A009214C7 /* DomainConvertibleType.swift */,
+				AB0E96E223426AAA009214C7 /* RealmRepresentable.swift */,
+			);
+			path = Convertion;
+			sourceTree = "<group>";
+		};
 		AB625444233C9B9200BF6D65 = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +444,7 @@
 		AB6254A3233CC7E700BF6D65 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				AB0E96DF2342683B009214C7 /* Convertion */,
 				AB0E96C923420E46009214C7 /* API */,
 				AB0E96C523402579009214C7 /* DB */,
 				AB0E96CA23420E5E009214C7 /* Plain */,
@@ -492,6 +508,7 @@
 				AB6254C6233E6C5B00BF6D65 /* DateExtension.swift */,
 				AB0E96B4233F7948009214C7 /* UIViewControllerExtension.swift */,
 				AB0E96B6233F7986009214C7 /* NSObjectExtension.swift */,
+				AB0E96E423426B92009214C7 /* ObjectExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -746,12 +763,14 @@
 				AB6254AD233CCA7E00BF6D65 /* ForecastShortPart.swift in Sources */,
 				AB0E96D2234219FE009214C7 /* HourForecastItem.swift in Sources */,
 				AB625451233C9B9200BF6D65 /* AppDelegate.swift in Sources */,
+				AB0E96E323426AAA009214C7 /* RealmRepresentable.swift in Sources */,
 				AB6254C5233E6C2700BF6D65 /* DateFormatterExtension.swift in Sources */,
 				AB625498233CC0B600BF6D65 /* APIClient.swift in Sources */,
 				AB0E96AB233F6F1A009214C7 /* DayForecastPresenter.swift in Sources */,
 				AB6254A2233CC73D00BF6D65 /* ForecastEndPoint.swift in Sources */,
 				AB0E96A9233F592A009214C7 /* DayForecastViewController.swift in Sources */,
 				AB0E96B3233F6F58009214C7 /* DayForecastProtocols.swift in Sources */,
+				AB0E96E12342685A009214C7 /* DomainConvertibleType.swift in Sources */,
 				AB6254AB233CC9B400BF6D65 /* ForecastParts.swift in Sources */,
 				AB0E96BE234009B4009214C7 /* DatabaseManager.swift in Sources */,
 				AB62548F233CA53200BF6D65 /* WeekForecastConfigurator.swift in Sources */,
@@ -771,6 +790,7 @@
 				AB6254C3233E6BCE00BF6D65 /* StringExtension.swift in Sources */,
 				AB0E96C723402607009214C7 /* DBDayForecastItem.swift in Sources */,
 				AB6254BC233CFEA100BF6D65 /* DayForecastItem.swift in Sources */,
+				AB0E96E523426B92009214C7 /* ObjectExtension.swift in Sources */,
 				AB625491233CA54200BF6D65 /* WeekForecastRouter.swift in Sources */,
 				AB0E96D623422923009214C7 /* HourForecastCell.swift in Sources */,
 				AB6254B8233CF2B700BF6D65 /* DayForecastCell.swift in Sources */,
