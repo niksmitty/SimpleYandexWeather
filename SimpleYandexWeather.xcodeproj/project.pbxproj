@@ -207,7 +207,7 @@
 		AB0E96C523402579009214C7 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				AB0E96C623402607009214C7 /* DBDayForecastItem.swift */,
+				AB0E96CB23420E6B009214C7 /* Forecast */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -220,6 +220,38 @@
 				AB625495233CC03F00BF6D65 /* ServiceLayer.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		AB0E96C923420E46009214C7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AB6254AE233CCB0600BF6D65 /* Forecast */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AB0E96CA23420E5E009214C7 /* Plain */ = {
+			isa = PBXGroup;
+			children = (
+				AB0E96CC23420E76009214C7 /* Forecast */,
+			);
+			path = Plain;
+			sourceTree = "<group>";
+		};
+		AB0E96CB23420E6B009214C7 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				AB0E96C623402607009214C7 /* DBDayForecastItem.swift */,
+			);
+			path = Forecast;
+			sourceTree = "<group>";
+		};
+		AB0E96CC23420E76009214C7 /* Forecast */ = {
+			isa = PBXGroup;
+			children = (
+				AB6254BB233CFEA100BF6D65 /* DayForecastItem.swift */,
+			);
+			path = Forecast;
 			sourceTree = "<group>";
 		};
 		AB625444233C9B9200BF6D65 = {
@@ -372,9 +404,9 @@
 		AB6254A3233CC7E700BF6D65 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				AB0E96C923420E46009214C7 /* API */,
 				AB0E96C523402579009214C7 /* DB */,
-				AB6254AE233CCB0600BF6D65 /* Forecast */,
-				AB6254BB233CFEA100BF6D65 /* DayForecastItem.swift */,
+				AB0E96CA23420E5E009214C7 /* Plain */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
