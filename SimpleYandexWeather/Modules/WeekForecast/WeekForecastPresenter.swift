@@ -52,7 +52,8 @@ extension WeekForecastPresenter: WeekForecastPresenterProtocol {
     }
     
     func refreshForecast() {
-        interactor.getForecastInfo(with: "55.75396", and: "37.620393")
+        guard let currentCoordinate = interactor.currentCoordinate else { return }
+        interactor.getForecastInfo(with: currentCoordinate)
     }
     
     var itemsCount: Int {
@@ -73,6 +74,10 @@ extension WeekForecastPresenter: WeekForecastPresenterProtocol {
 // MARK: - WeekForecastPresenterProtocol methods
 
 extension WeekForecastPresenter: WeekForecastInteractorOutputProtocol {
+    
+    func locationDidUpdate(_ coordinate: Coordinate) {
+        interactor.getForecastInfo(with: coordinate)
+    }
     
     func hideIndicators() {
         view.hideProgress()

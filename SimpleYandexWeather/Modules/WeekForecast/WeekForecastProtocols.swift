@@ -31,13 +31,15 @@ protocol WeekForecastPresenterProtocol: class {
 }
 
 protocol WeekForecastInteractorOutputProtocol: class {
+    func locationDidUpdate(_ coordinate: Coordinate)
     func hideIndicators()
     func handleSuccess(with forecastItems: [DayForecastItem])
     func handleError(_ errorString: String)
 }
 
 protocol WeekForecastInteractorProtocol: class {
-    func getForecastInfo(with latitude: String, and longitude: String)
+    var currentCoordinate: Coordinate? { get }
+    func getForecastInfo(with coordinate: Coordinate)
 }
 
 protocol WeekForecastRouterProtocol: class {

@@ -12,17 +12,23 @@ class WeekForecastInteractor {
     
     private let forecastService: ForecastService
     private let forecastStorageService: ForecastStorageService
+    private let locationService: LocationService
     
     required init(presenter: WeekForecastInteractorOutputProtocol,
                   forecastService: ForecastService = ServiceLayer.shared.forecastService,
-                  forecastStorageService: ForecastStorageService = ServiceLayer.shared.forecastStorageService) {
+                  forecastStorageService: ForecastStorageService = ServiceLayer.shared.forecastStorageService,
+                  locationService: LocationService = ServiceLayer.shared.locationService) {
         self.presenter = presenter
         self.forecastService = forecastService
         self.forecastStorageService = forecastStorageService
+        self.locationService = locationService
+        self.locationService.delegate = self
         self.forecastStorageService.observeDayForecastItemsUpdates {
             self.presenter.handleSuccess(with: self.fetchDayForecastItems())
         }
     }
+    
+    private var _currentCoordinate: Coordinate?
     
     private func dayForecastItems(from forecastInfo: ForecastInfo) -> [DayForecastItem] {
         return DayForecastItem.dayForecastItems(from: forecastInfo)
@@ -34,14 +40,27 @@ class WeekForecastInteractor {
     
 }
 
+extension WeekForecastInteractor: LocationUpdateProtocol {
+    
+    func locationDidUpdate(to coordinate: Coordinate) {
+        _currentCoordinate = coordinate
+        presenter.locationDidUpdate(coordinate)
+    }
+    
+}
+
 // MARK: - WeekForecastInteractorProtocol methods
 
 extension WeekForecastInteractor: WeekForecastInteractorProtocol {
     
-    func getForecastInfo(with latitude: String, and longitude: String) {
+    var currentCoordinate: Coordinate? {
+        return _currentCoordinate
+    }
+    
+    func getForecastInfo(with coordinate: Coordinate) {
         presenter.handleSuccess(with: fetchDayForecastItems())
         
-        forecastService.getForecastInfo(latitude: latitude, longitude: longitude) { forecastInfo, error in
+        forecastService.getForecastInfo(latitude: "\(coordinate.latitude)", longitude: "\(coordinate.longitude)") { forecastInfo, error in
             guard error == nil, let forecastInfo = forecastInfo else {
                 self.presenter.hideIndicators()
                 self.presenter.handleError(String(describing: error))
