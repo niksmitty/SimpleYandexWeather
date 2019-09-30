@@ -64,6 +64,7 @@ extension ForecastStorageServiceImpl: ForecastStorageService {
         
         do {
             try database.deleteAll(DBDayForecastItem.self)
+            try database.deleteAll(DBHourForecastItem.self)
             try database.save(objects: dbItems)
         } catch {
             print(error.localizedDescription)
