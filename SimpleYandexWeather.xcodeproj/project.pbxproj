@@ -25,6 +25,8 @@
 		AB0E96CE2342143D009214C7 /* ForecastHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96CD2342143D009214C7 /* ForecastHour.swift */; };
 		AB0E96D023421711009214C7 /* DBHourForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96CF23421711009214C7 /* DBHourForecastItem.swift */; };
 		AB0E96D2234219FE009214C7 /* HourForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96D1234219FD009214C7 /* HourForecastItem.swift */; };
+		AB0E96D623422923009214C7 /* HourForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96D423422923009214C7 /* HourForecastCell.swift */; };
+		AB0E96D723422923009214C7 /* HourForecastCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB0E96D523422923009214C7 /* HourForecastCell.xib */; };
 		AB625451233C9B9200BF6D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625450233C9B9200BF6D65 /* AppDelegate.swift */; };
 		AB625453233C9B9200BF6D65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625452233C9B9200BF6D65 /* SceneDelegate.swift */; };
 		AB62545A233C9B9300BF6D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB625459233C9B9300BF6D65 /* Assets.xcassets */; };
@@ -100,6 +102,8 @@
 		AB0E96CD2342143D009214C7 /* ForecastHour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastHour.swift; sourceTree = "<group>"; };
 		AB0E96CF23421711009214C7 /* DBHourForecastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHourForecastItem.swift; sourceTree = "<group>"; };
 		AB0E96D1234219FD009214C7 /* HourForecastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourForecastItem.swift; sourceTree = "<group>"; };
+		AB0E96D423422923009214C7 /* HourForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourForecastCell.swift; sourceTree = "<group>"; };
+		AB0E96D523422923009214C7 /* HourForecastCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HourForecastCell.xib; sourceTree = "<group>"; };
 		AB62544D233C9B9200BF6D65 /* SimpleYandexWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYandexWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB625450233C9B9200BF6D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB625452233C9B9200BF6D65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -260,6 +264,15 @@
 				AB0E96D1234219FD009214C7 /* HourForecastItem.swift */,
 			);
 			path = Forecast;
+			sourceTree = "<group>";
+		};
+		AB0E96D323422903009214C7 /* HourForecast */ = {
+			isa = PBXGroup;
+			children = (
+				AB0E96D423422923009214C7 /* HourForecastCell.swift */,
+				AB0E96D523422923009214C7 /* HourForecastCell.xib */,
+			);
+			path = HourForecast;
 			sourceTree = "<group>";
 		};
 		AB625444233C9B9200BF6D65 = {
@@ -452,6 +465,7 @@
 			isa = PBXGroup;
 			children = (
 				AB6254BA233CF2C000BF6D65 /* DayForecast */,
+				AB0E96D323422903009214C7 /* HourForecast */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -600,6 +614,7 @@
 				AB6254B9233CF2B700BF6D65 /* DayForecastCell.xib in Resources */,
 				AB625487233CA38700BF6D65 /* Forecast.storyboard in Resources */,
 				AB62545A233C9B9300BF6D65 /* Assets.xcassets in Resources */,
+				AB0E96D723422923009214C7 /* HourForecastCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -751,6 +766,7 @@
 				AB0E96C723402607009214C7 /* DBDayForecastItem.swift in Sources */,
 				AB6254BC233CFEA100BF6D65 /* DayForecastItem.swift in Sources */,
 				AB625491233CA54200BF6D65 /* WeekForecastRouter.swift in Sources */,
+				AB0E96D623422923009214C7 /* HourForecastCell.swift in Sources */,
 				AB6254B8233CF2B700BF6D65 /* DayForecastCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
