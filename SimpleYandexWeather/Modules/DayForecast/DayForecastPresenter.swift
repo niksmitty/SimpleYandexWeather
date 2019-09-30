@@ -14,6 +14,8 @@ class DayForecastPresenter {
     var interactor: DayForecastInteractorProtocol!
     var router: DayForecastRouterProtocol!
     
+    var items = [HourForecastItem]()
+    
     private let dayForecastItem: DayForecastItem
     
     required init(view: DayForecastViewProtocol, dayForecastItem: DayForecastItem) {
@@ -27,8 +29,31 @@ class DayForecastPresenter {
 
 extension DayForecastPresenter: DayForecastPresenterProtocol {
     
+    var reuseIdentifier: String {
+        return Const.hourForecastReuseIdentifier
+    }
+    
+    var sectionHeaderHeight: Double {
+        return Const.sectionHeaderHeight
+    }
+    
+    var sectionFooterHeight: Double {
+        return Const.sectionFooterHeight
+    }
+    
     func configureView() {
         view.configureNavigationBar(dayForecastItem.day)
+        view.registerCell(Const.hourForecastCellNibName, Const.hourForecastReuseIdentifier)
+        items = dayForecastItem.hours
+    }
+    
+    var itemsCount: Int {
+        return items.count
+    }
+    
+    func item(atIndex indexPath: IndexPath) -> HourForecastItem? {
+        guard items.indices.contains(indexPath.row) else { return nil }
+        return items[indexPath.row]
     }
     
 }
@@ -37,4 +62,16 @@ extension DayForecastPresenter: DayForecastPresenterProtocol {
 
 extension DayForecastPresenter: DayForecastInteractorOutputProtocol {
     
+}
+
+// MARK: - Constants
+
+extension DayForecastPresenter {
+    private enum Const {
+        static let hourForecastCellNibName = "HourForecastCell"
+        static let hourForecastReuseIdentifier = "HourForecastCell"
+        
+        static let sectionHeaderHeight = 0.01
+        static let sectionFooterHeight = 0.01
+    }
 }

@@ -6,12 +6,21 @@
 //  Copyright © 2019 Никита. All rights reserved.
 //
 
+import Foundation
+
 protocol DayForecastViewProtocol: class {
     func configureNavigationBar(_ title: String)
+    func registerCell(_ nibName: String, _ reuseIdentifier: String)
+    func reloadData()
 }
 
 protocol DayForecastPresenterProtocol: class {
+    var reuseIdentifier: String { get }
+    var sectionHeaderHeight: Double { get }
+    var sectionFooterHeight: Double { get }
     func configureView()
+    var itemsCount: Int { get }
+    func item(atIndex indexPath: IndexPath) -> HourForecastItem?
 }
 
 protocol DayForecastInteractorOutputProtocol: class {

@@ -56,21 +56,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day forecast" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lR8-fR-HjF">
-                                <rect key="frame" x="159" y="437.5" width="96.5" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5WY-FK-KQA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="GKX-2H-QaV" id="5bv-vb-6gj"/>
+                                    <outlet property="delegate" destination="GKX-2H-QaV" id="kfn-b3-XWJ"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="lR8-fR-HjF" firstAttribute="centerY" secondItem="c86-o0-asa" secondAttribute="centerY" id="YAO-p9-N3O"/>
-                            <constraint firstItem="lR8-fR-HjF" firstAttribute="centerX" secondItem="c86-o0-asa" secondAttribute="centerX" id="y4w-y0-iDi"/>
+                            <constraint firstItem="5WY-FK-KQA" firstAttribute="top" secondItem="x3B-Iu-7ES" secondAttribute="top" id="B3a-MJ-li1"/>
+                            <constraint firstItem="x3B-Iu-7ES" firstAttribute="bottom" secondItem="5WY-FK-KQA" secondAttribute="bottom" id="N1S-bq-hIC"/>
+                            <constraint firstItem="x3B-Iu-7ES" firstAttribute="trailing" secondItem="5WY-FK-KQA" secondAttribute="trailing" id="Sbz-M8-laa"/>
+                            <constraint firstItem="5WY-FK-KQA" firstAttribute="leading" secondItem="x3B-Iu-7ES" secondAttribute="leading" id="x6A-mL-vgr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x3B-Iu-7ES"/>
                     </view>
                     <navigationItem key="navigationItem" id="eEq-Xd-eu1"/>
+                    <connections>
+                        <outlet property="tableView" destination="5WY-FK-KQA" id="9KS-Jm-JQy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ckr-34-HXw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
