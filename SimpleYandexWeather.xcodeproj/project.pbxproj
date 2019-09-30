@@ -22,6 +22,9 @@
 		AB0E96C12340219E009214C7 /* ForecastStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96C02340219E009214C7 /* ForecastStorageService.swift */; };
 		AB0E96C4234021D5009214C7 /* ForecastStorageServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96C3234021D5009214C7 /* ForecastStorageServiceImpl.swift */; };
 		AB0E96C723402607009214C7 /* DBDayForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96C623402607009214C7 /* DBDayForecastItem.swift */; };
+		AB0E96CE2342143D009214C7 /* ForecastHour.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96CD2342143D009214C7 /* ForecastHour.swift */; };
+		AB0E96D023421711009214C7 /* DBHourForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96CF23421711009214C7 /* DBHourForecastItem.swift */; };
+		AB0E96D2234219FE009214C7 /* HourForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96D1234219FD009214C7 /* HourForecastItem.swift */; };
 		AB625451233C9B9200BF6D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625450233C9B9200BF6D65 /* AppDelegate.swift */; };
 		AB625453233C9B9200BF6D65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625452233C9B9200BF6D65 /* SceneDelegate.swift */; };
 		AB62545A233C9B9300BF6D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB625459233C9B9300BF6D65 /* Assets.xcassets */; };
@@ -94,6 +97,9 @@
 		AB0E96C02340219E009214C7 /* ForecastStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastStorageService.swift; sourceTree = "<group>"; };
 		AB0E96C3234021D5009214C7 /* ForecastStorageServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastStorageServiceImpl.swift; sourceTree = "<group>"; };
 		AB0E96C623402607009214C7 /* DBDayForecastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBDayForecastItem.swift; sourceTree = "<group>"; };
+		AB0E96CD2342143D009214C7 /* ForecastHour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastHour.swift; sourceTree = "<group>"; };
+		AB0E96CF23421711009214C7 /* DBHourForecastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHourForecastItem.swift; sourceTree = "<group>"; };
+		AB0E96D1234219FD009214C7 /* HourForecastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourForecastItem.swift; sourceTree = "<group>"; };
 		AB62544D233C9B9200BF6D65 /* SimpleYandexWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYandexWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB625450233C9B9200BF6D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB625452233C9B9200BF6D65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				AB0E96C623402607009214C7 /* DBDayForecastItem.swift */,
+				AB0E96CF23421711009214C7 /* DBHourForecastItem.swift */,
 			);
 			path = Forecast;
 			sourceTree = "<group>";
@@ -250,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				AB6254BB233CFEA100BF6D65 /* DayForecastItem.swift */,
+				AB0E96D1234219FD009214C7 /* HourForecastItem.swift */,
 			);
 			path = Forecast;
 			sourceTree = "<group>";
@@ -418,6 +426,7 @@
 				AB6254A8233CC91500BF6D65 /* Forecast.swift */,
 				AB6254AA233CC9B400BF6D65 /* ForecastParts.swift */,
 				AB6254AC233CCA7E00BF6D65 /* ForecastShortPart.swift */,
+				AB0E96CD2342143D009214C7 /* ForecastHour.swift */,
 			);
 			path = Forecast;
 			sourceTree = "<group>";
@@ -708,10 +717,13 @@
 				AB6254B4233CCFD800BF6D65 /* ForecastServiceImpl.swift in Sources */,
 				AB0E96AD233F6F2C009214C7 /* DayForecastInteractor.swift in Sources */,
 				AB0E96B9233F79C9009214C7 /* Storyboards.swift in Sources */,
+				AB0E96D023421711009214C7 /* DBHourForecastItem.swift in Sources */,
 				AB62548B233CA51500BF6D65 /* WeekForecastPresenter.swift in Sources */,
 				AB62549F233CC4C100BF6D65 /* APIConstants.swift in Sources */,
 				AB6254C7233E6C5B00BF6D65 /* DateExtension.swift in Sources */,
+				AB0E96CE2342143D009214C7 /* ForecastHour.swift in Sources */,
 				AB6254AD233CCA7E00BF6D65 /* ForecastShortPart.swift in Sources */,
+				AB0E96D2234219FE009214C7 /* HourForecastItem.swift in Sources */,
 				AB625451233C9B9200BF6D65 /* AppDelegate.swift in Sources */,
 				AB6254C5233E6C2700BF6D65 /* DateFormatterExtension.swift in Sources */,
 				AB625498233CC0B600BF6D65 /* APIClient.swift in Sources */,

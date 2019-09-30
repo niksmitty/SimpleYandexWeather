@@ -14,6 +14,7 @@ class DBDayForecastItem: Object {
     @objc dynamic var dayTemperature: Int = 0
     @objc dynamic var nightIconUrl: String = ""
     @objc dynamic var nightTemperature: Int = 0
+    let hours = List<DBHourForecastItem>()
     
     override class func primaryKey() -> String? {
         return "day"

@@ -9,4 +9,5 @@
 struct Forecast: Codable {
     let date: String
     let parts: ForecastParts
+    let hours: [ForecastHour]
 }

@@ -12,4 +12,5 @@ struct DayForecastItem {
     let dayTemperature: Int
     let nightIconUrl: String
     let nightTemperature: Int
+    let hours: [HourForecastItem]
 }
