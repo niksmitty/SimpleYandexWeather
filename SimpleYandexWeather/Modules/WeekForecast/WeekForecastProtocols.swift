@@ -32,7 +32,7 @@ protocol WeekForecastPresenterProtocol: class {
 
 protocol WeekForecastInteractorOutputProtocol: class {
     func hideIndicators()
-    func handleSuccess(with forecastInfo: ForecastInfo)
+    func handleSuccess(with forecastItems: [DayForecastItem])
     func handleError(_ errorString: String)
 }
 

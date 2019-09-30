@@ -14,24 +14,21 @@ class WeekForecastPresenter {
     var interactor: WeekForecastInteractorProtocol!
     var router: WeekForecastRouterProtocol!
     
-    var items = [DayForecastItem]()
+    var items = [DayForecastItem]() {
+        didSet {
+            items = items.map {
+                DayForecastItem(day: $0.day.customDateString(with: Const.inputDateFormatString,
+                                                             and: Const.outputDateFormatString) ?? $0.day,
+                                dayIconUrl: $0.dayIconUrl,
+                                dayTemperature: $0.dayTemperature,
+                                nightIconUrl: $0.nightIconUrl,
+                                nightTemperature: $0.nightTemperature)
+            }
+        }
+    }
     
     required init(view: WeekForecastViewProtocol) {
         self.view = view
-    }
-    
-    private func dayForecastItems(from forecastInfo: ForecastInfo) -> [DayForecastItem] {
-        let daysForecast = forecastInfo.forecasts.map {
-            DayForecastItem(day: $0.date.customDateString(with: Const.inputDateFormatString,
-                                                          and: Const.outputDateFormatString) ?? $0.date,
-                            dayIconUrl: String(format: interactor.iconsUrlPattern,
-                                               $0.parts.dayShort.icon),
-                            dayTemperature: $0.parts.dayShort.temp,
-                            nightIconUrl: String(format: interactor.iconsUrlPattern,
-                                                 $0.parts.nightShort.icon),
-                            nightTemperature: $0.parts.nightShort.temp)
-        }
-        return daysForecast
     }
     
 }
@@ -89,8 +86,8 @@ extension WeekForecastPresenter: WeekForecastInteractorOutputProtocol {
         view.hideRefreshControl()
     }
     
-    func handleSuccess(with forecastInfo: ForecastInfo) {
-        self.items = dayForecastItems(from: forecastInfo)
+    func handleSuccess(with forecastItems: [DayForecastItem]) {
+        self.items = forecastItems
         view.reloadData()
     }
     
