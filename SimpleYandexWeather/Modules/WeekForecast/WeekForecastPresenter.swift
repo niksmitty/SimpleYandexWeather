@@ -22,7 +22,8 @@ class WeekForecastPresenter {
                                 dayIconUrl: $0.dayIconUrl,
                                 dayTemperature: $0.dayTemperature,
                                 nightIconUrl: $0.nightIconUrl,
-                                nightTemperature: $0.nightTemperature)
+                                nightTemperature: $0.nightTemperature,
+                                hours: $0.hours)
             }
         }
     }

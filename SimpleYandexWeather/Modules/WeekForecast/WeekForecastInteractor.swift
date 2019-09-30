@@ -33,7 +33,8 @@ class WeekForecastInteractor {
                                 dayTemperature: $0.parts.dayShort.temp,
                                 nightIconUrl: String(format: iconsUrlPattern,
                                                      $0.parts.nightShort.icon),
-                                nightTemperature: $0.parts.nightShort.temp)
+                                nightTemperature: $0.parts.nightShort.temp,
+                                hours: $0.hours.map { HourForecastItem(hour: $0.hour, iconUrl: $0.icon, temperature: $0.temp) })
         }
     }
     
