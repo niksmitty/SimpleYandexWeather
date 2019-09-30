@@ -16,15 +16,7 @@ class WeekForecastPresenter {
     
     var items = [DayForecastItem]() {
         didSet {
-            items = items.map {
-                DayForecastItem(day: $0.day.customDateString(with: Const.inputDateFormatString,
-                                                             and: Const.outputDateFormatString) ?? $0.day,
-                                dayIconUrl: $0.dayIconUrl,
-                                dayTemperature: $0.dayTemperature,
-                                nightIconUrl: $0.nightIconUrl,
-                                nightTemperature: $0.nightTemperature,
-                                hours: $0.hours)
-            }
+            items = DayForecastItem.transformDaysFormat(for: items)
         }
     }
     
@@ -106,9 +98,6 @@ extension WeekForecastPresenter {
         static let dayForecastReuseIdentifier = "DayForecastCell"
         
         static let refreshControlTitle = NSLocalizedString("Week forecast refresh control title", comment: "")
-        
-        static let inputDateFormatString = "yyyy-MM-dd"
-        static let outputDateFormatString = "d MMMM"
         
         static let sectionHeaderHeight = 0.01
         static let sectionFooterHeight = 0.01

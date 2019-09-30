@@ -38,7 +38,6 @@ protocol WeekForecastInteractorOutputProtocol: class {
 
 protocol WeekForecastInteractorProtocol: class {
     func getForecastInfo(with latitude: String, and longitude: String)
-    var iconsUrlPattern: String { get }
 }
 
 protocol WeekForecastRouterProtocol: class {
