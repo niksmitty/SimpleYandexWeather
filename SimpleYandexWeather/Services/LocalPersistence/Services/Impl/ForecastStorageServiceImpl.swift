@@ -6,8 +6,6 @@
 //  Copyright © 2019 Никита. All rights reserved.
 //
 
-import RealmSwift
-
 final class ForecastStorageServiceImpl {
     
     private(set) var database: DatabaseManagerProtocol
