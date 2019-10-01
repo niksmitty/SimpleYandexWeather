@@ -12,6 +12,7 @@ protocol DayForecastViewProtocol: class {
     func configureNavigationBar(_ title: String)
     func registerCell(_ nibName: String, _ reuseIdentifier: String)
     func reloadData()
+    func configureTableBackgroundView(_ itemsCount: Int, _ emptyMessage: String)
 }
 
 protocol DayForecastPresenterProtocol: class {

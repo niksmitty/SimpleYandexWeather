@@ -48,7 +48,9 @@ extension DayForecastPresenter: DayForecastPresenterProtocol {
     }
     
     var itemsCount: Int {
-        return items.count
+        let itemsCount = items.count
+        view.configureTableBackgroundView(itemsCount, Const.emptyMessageString)
+        return itemsCount
     }
     
     func item(atIndex indexPath: IndexPath) -> HourForecastItem? {
@@ -73,5 +75,7 @@ extension DayForecastPresenter {
         
         static let sectionHeaderHeight = 0.01
         static let sectionFooterHeight = 0.01
+        
+        static let emptyMessageString = NSLocalizedString("Empty message title", comment: "")
     }
 }

@@ -83,6 +83,14 @@ extension DayForecastViewController: DayForecastViewProtocol {
         }
     }
     
+    func configureTableBackgroundView(_ itemsCount: Int, _ emptyMessage: String) {
+        if itemsCount == 0 {
+            tableView.setEmptyMessage(emptyMessage)
+        } else {
+            tableView.restore()
+        }
+    }
+    
 }
 
 // MARK: - Constants
