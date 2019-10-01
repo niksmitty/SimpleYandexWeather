@@ -32,6 +32,7 @@
 		AB0E96E323426AAA009214C7 /* RealmRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96E223426AAA009214C7 /* RealmRepresentable.swift */; };
 		AB0E96E523426B92009214C7 /* ObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96E423426B92009214C7 /* ObjectExtension.swift */; };
 		AB0E96E923427A4D009214C7 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96E823427A4D009214C7 /* LocationService.swift */; };
+		AB0E96EB23434224009214C7 /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0E96EA23434224009214C7 /* UITableViewExtension.swift */; };
 		AB625451233C9B9200BF6D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625450233C9B9200BF6D65 /* AppDelegate.swift */; };
 		AB625453233C9B9200BF6D65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB625452233C9B9200BF6D65 /* SceneDelegate.swift */; };
 		AB62545A233C9B9300BF6D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB625459233C9B9300BF6D65 /* Assets.xcassets */; };
@@ -115,6 +116,7 @@
 		AB0E96E223426AAA009214C7 /* RealmRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRepresentable.swift; sourceTree = "<group>"; };
 		AB0E96E423426B92009214C7 /* ObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectExtension.swift; sourceTree = "<group>"; };
 		AB0E96E823427A4D009214C7 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		AB0E96EA23434224009214C7 /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		AB62544D233C9B9200BF6D65 /* SimpleYandexWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleYandexWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB625450233C9B9200BF6D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB625452233C9B9200BF6D65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -528,6 +530,7 @@
 				AB0E96B4233F7948009214C7 /* UIViewControllerExtension.swift */,
 				AB0E96B6233F7986009214C7 /* NSObjectExtension.swift */,
 				AB0E96E423426B92009214C7 /* ObjectExtension.swift */,
+				AB0E96EA23434224009214C7 /* UITableViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -770,6 +773,7 @@
 				AB0E96B1233F6F4B009214C7 /* DayForecastConfigurator.swift in Sources */,
 				AB0E96B7233F7986009214C7 /* NSObjectExtension.swift in Sources */,
 				AB6254A9233CC91500BF6D65 /* Forecast.swift in Sources */,
+				AB0E96EB23434224009214C7 /* UITableViewExtension.swift in Sources */,
 				AB625493233CA55900BF6D65 /* WeekForecastProtocols.swift in Sources */,
 				AB6254B4233CCFD800BF6D65 /* ForecastServiceImpl.swift in Sources */,
 				AB0E96AD233F6F2C009214C7 /* DayForecastInteractor.swift in Sources */,
